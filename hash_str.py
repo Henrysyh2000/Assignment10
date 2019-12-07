@@ -11,7 +11,14 @@ def hash_str(string):
         Hint: Be creative! There are many correct answers.
     """
     # To do
-    pass
+    if string == '':
+        return 0
+    res = 0
+    for i in range(len(string)):
+        num = ord(string[i]) % 11 + 3
+        res += num**(i + 2)
+    return res
+        
 
 def main():
     print("Hash lee: ", hash_str("lee"))

@@ -7,7 +7,20 @@ def most_frequent(l1):
     return: Any -- the most frequent element
     """
     # To do
-    pass
+    dic = {}
+    for i in l1:
+        if i in dic:
+            dic[i] += 1
+        else:
+            dic[i] = 1
+    m = dic[l1[0]]
+    res = l1[0]
+    for i in dic:
+        if dic[i] > m:
+            m = dic[i]
+            res = i
+    return res
+        
 
 def main():
     l1 = [1,2,3,4,5,6,7,8,9,0,0]

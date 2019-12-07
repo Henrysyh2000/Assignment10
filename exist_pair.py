@@ -8,7 +8,13 @@ def exist_pair(L, X):
     :return: True if we can find two elements in L whose sum is exactly X. False otherwise.
     """
     # To do
-    pass
+    dic = {}
+    for i in L:
+        dic[i] = None
+    for i in dic:
+        if (X - i) in dic:
+            return True
+    return False
 
 def main():
     l1 = [20, 36, 35, 46, 25, 27, 8, 0, 34, 31]
